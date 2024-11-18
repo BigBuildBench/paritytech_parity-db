@@ -1,0 +1,11 @@
+[package]
+name = "parity-db-admin"
+version = "0.0.1"
+authors = ["Parity Technologies <admin@parity.io>"]
+publish = false
+edition = "2018"
+
+[dependencies]
+
+[target.'cfg(not(target_env = "msvc"))'.dependencies]
+jemallocator = "0.5.0"

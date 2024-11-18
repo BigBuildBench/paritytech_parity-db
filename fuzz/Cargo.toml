@@ -1,0 +1,29 @@
+[package]
+name = "parity-db-fuzz"
+version = "0.0.0"
+authors = ["Automatically generated"]
+publish = false
+edition = "2018"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+
+[profile.release]
+debug = true
+
+[workspace]
+members = ["."]
+
+[[bin]]
+name = "simple_model"
+path = "fuzz_targets/simple_model.rs"
+test = false
+doc = false
+
+[[bin]]
+name = "refcounted_model"
+path = "fuzz_targets/refcounted_model.rs"
+test = false
+doc = false
